@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { Flex, Box, Text, Icon } from "@chakra-ui/react";
@@ -11,7 +11,7 @@ import noresult from "../assets/images/noresult.svg";
 
 const search = ({ properties }) => {
   const [searchFilters, setSearchFilters] = useState(false);
-  const router = useRouter();
+  const Router = useRouter();
   return (
     <Box>
       <Flex
@@ -31,7 +31,7 @@ const search = ({ properties }) => {
       </Flex>
       {searchFilters && <SearchFilters />}
       <Text fontSize="2xl" p="4" fontWeight="bold">
-        Properties {router.query.purpose}
+        Properties {Router.query.purpose}
       </Text>
       <Flex flexWrap="wrap">
         {properties.map((property) => (

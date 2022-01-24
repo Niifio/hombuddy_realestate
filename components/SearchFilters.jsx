@@ -61,8 +61,8 @@ const SearchFilters = () => {
           <Select
             size="lg"
             placeholder={filter.placeholder}
-            // w="fit-content"
-            // p="2"
+            w="fit-content"
+            p="2"
             onChange={(e) =>
               searchProperties({ [filter.queryName]: e.target.value })
             }
@@ -137,7 +137,7 @@ const SearchFilters = () => {
                     marginTop="5"
                     marginBottom="5"
                   >
-                    <Image src={noresult} />
+                    <Image src={noresult} alt="noresult" />
                     <Text fontSize="xl" marginTop="3">
                       Waiting to search!
                     </Text>
